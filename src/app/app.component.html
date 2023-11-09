@@ -1,0 +1,10 @@
+<div *ngIf="show">
+  <div href="" [ngClass]="{'hello':true}"></div>
+  <div *ngIf="isAdmin then thenBlock else elseBlock"></div>
+
+  <ng-template #thenBlock [ngIf]="true"><p>Hello Admin {{name}}</p>
+  <button (click)="fun()">Click</button>
+   </ng-template>
+
+   <ng-template #elseBlock [ngIf]="true"><p>Hello Guest Mukesh</p></ng-template>
+</div>
